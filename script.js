@@ -8,4 +8,9 @@ function Person(firstName, birthYear){
 
 const sree = new Person("sree", new Date(1,1,15))
 
-console.log(sree);
+
+
+//creating objs using constructor function
+
+const ram = new Person("ram", "seth")
+const rakesh = new Person("rakesh")
