@@ -17,5 +17,7 @@ console.log(new Date());
 
 const ram = new Person("ram", "seth")
 const rakesh = new Person("rakesh")
+const khyathi = new Person("khyathi", new Date("October 25 2001"))
+
 
 console.log(rakesh instanceof(Person));
