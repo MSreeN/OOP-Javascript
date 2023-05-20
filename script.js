@@ -21,3 +21,13 @@ const khyathi = new Person("khyathi", new Date("October 25 2001"))
 
 
 console.log(rakesh instanceof(Person));
+
+
+////////////////////own 
+function Vehicle(vehicleName, vehicleDate){
+  this.name = vehicleName;
+  this.manufactureDate = vehicleDate;
+}
+
+const toyota = new Vehicle("toyata", new Date("25 apr 2001"));
+console.log(toyota);
