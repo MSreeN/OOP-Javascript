@@ -39,7 +39,7 @@ const toyota = new Vehicle("toyata", new Date("25 apr 2001"));
 
 console.log(Person.prototype);
 
-
+//Here we are defining an function with name calcAge on the prototype property of Person construction function
 Person.prototype.calcAge = function(){
   return 2022 - this.birthYear.getFullYear()
 }
