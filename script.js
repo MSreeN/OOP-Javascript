@@ -46,5 +46,5 @@ Person.prototype.calcAge = function(){
 
 console.log(sree, sree.calcAge());
 
-const mahesh = new Person("mahesh", new Date("25 oct 2001"))
+const mahesh = new Person("mahesh", new Date("25 oct 2005"))
 console.log(mahesh, "&" , mahesh.calcAge());
