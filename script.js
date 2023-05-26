@@ -63,4 +63,8 @@ console.log(Person.prototype.isPrototypeOf(naga));
 
 //Below line returns false because Person.prototype is an object but Person is not an object itself.
 console.log(Person.prototype.isPrototypeOf(Person));
-console.log(Person.prototype);
+
+Person.prototype.species = "humans"
+console.log(naga,sree);
+console.log(naga.hasOwnProperty("firstName"));
+console.log(naga.hasOwnProperty("species"));
