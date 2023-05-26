@@ -59,3 +59,8 @@ console.log(naga.__proto__ === Person.prototype);
 
 //Person has prototype object and all the objects created using person has link to it so that is why above and below lines are yielding true.
 console.log(Person.prototype.isPrototypeOf(naga));
+
+
+//Below line returns false because Person.prototype is an object but Person is not an object itself.
+console.log(Person.prototype.isPrototypeOf(Person));
+console.log(Person.prototype);
