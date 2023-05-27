@@ -55,6 +55,7 @@ console.log(mahesh, "&" , mahesh.calcAge());
 console.log(naga);
 
 //Every object has a property prototype, when we print naga is the console we can see prototype object in naga but it doesn't mean that every object like naga is carrying that prototype property around, it is just the link to the prototype object.
+//naga is able to access calcAge because of "Prototypal Inheritance", properties of prototype are getting inherited to naga
 console.log(naga.__proto__ === Person.prototype);
 
 //Person has prototype object and all the objects created using person has link to it so that is why above and below lines are yielding true.
