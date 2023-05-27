@@ -72,6 +72,7 @@ console.log(Object.prototype.isPrototypeOf(Person.prototype));
 //If you check the line 74 it is returning false because Prototype is also an object so it should also have a prototype object, yes it has, and that is from the Object constructor.
 //You can ask question that why prototype inside Person.Prototype is from Object Prototype?
 //Answer: Because Object constructor is the function that is called every time we create an object literal and naga prototype is not of the type Object of prototype because it's prototype is created using new Person and same like that prototype inside of Person's prototype is created using the new Object().
+//Object.Prototype points to null that marks the end of the Prototype chain.
 console.log(Object.prototype.isPrototypeOf(Person.prototype));
 console.log(Person.prototype.isPrototypeOf(Person));
 
