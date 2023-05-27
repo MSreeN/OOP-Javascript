@@ -62,6 +62,7 @@ console.log(Person.prototype.isPrototypeOf(naga));
 
 
 //Below line returns false because Person.prototype is an object but Person is not an object itself.
+//Prototype is not the prototype of Person, but of all the objects that are created using Person
 console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.species = "humans"
