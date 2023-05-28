@@ -80,3 +80,7 @@ Person.prototype.species = "humans"
 console.log(naga,sree);
 console.log(naga.hasOwnProperty("firstName"));
 console.log(naga.hasOwnProperty("species"));
+
+//Always remember 
+//Array -> Function -> Object
+console.log(Array.__proto__ === Function.prototype);
