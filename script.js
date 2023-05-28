@@ -83,6 +83,10 @@ console.log(naga.hasOwnProperty("species"));
 
 //Always remember 
 //Array -> Function -> Object
-console.log(Array.__proto__ === Function.prototype);
+console.log(Array.__proto__ === Function.prototype);//true
 
-console.log(Function.prototype.__proto__ === Object.prototype);
+console.log(Function.prototype.__proto__ === Object.prototype);//true
+
+console.log(Function.__proto__.__proto__ === Object.prototype);
+
+console.log(Array.__proto__);
