@@ -94,3 +94,6 @@ console.log(Array.__proto__);
 console.log(Object.getPrototypeOf(naga.__proto__) === Person.prototype);
 console.log(Function.prototype.__proto__ === Object.prototype);
 console.log(Array.__proto__ == Function.prototype);
+
+const sampleFun = new Function("return 5");
+console.log(sampleFun.__proto__ == Function.prototype);
