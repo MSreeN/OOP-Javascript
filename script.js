@@ -84,10 +84,13 @@ console.log(naga.hasOwnProperty("species"));
 //Always remember 
 //Array -> Function -> Object
 console.log(Array.__proto__ === Function.prototype);//true
+console.log(Function.__proto__ == Object.prototype);
 
 console.log(Function.prototype.__proto__ === Object.prototype);//true
-
+//Below line is false because Function is not an instance of any kind of object so it doesn't have __proto__ property on it.
 console.log(Function.__proto__ === Object.prototype);
 
 console.log(Array.__proto__);
 console.log(Object.getPrototypeOf(naga.__proto__) === Person.prototype);
+console.log(Function.prototype.__proto__ === Object.prototype);
+console.log(Array.__proto__ == Function.prototype);
