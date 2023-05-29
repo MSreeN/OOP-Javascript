@@ -90,4 +90,4 @@ console.log(Function.prototype.__proto__ === Object.prototype);//true
 console.log(Function.__proto__ === Object.prototype);
 
 console.log(Array.__proto__);
-console.log(Object.getPrototypeOf(Function.prototype) === Object.prototype);
+console.log(Object.getPrototypeOf(naga.__proto__) === Person.prototype);
