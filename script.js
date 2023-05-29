@@ -95,5 +95,10 @@ console.log(Object.getPrototypeOf(naga.__proto__) === Person.prototype);
 console.log(Function.prototype.__proto__ === Object.prototype);
 console.log(Array.__proto__ == Function.prototype);
 
-const sampleFun = new Function("return 5");
+//using new Function, it returns an object which is sampleFun here and it has __proto__ on it and that's why below log returns true
+const sampleFun = new Function();
 console.log(sampleFun.__proto__ == Function.prototype);
+
+//using normal function syntax, sample is an reference to function, so it is not an object that's why below log returns false because sample doesn't have __proto__ on it.
+const sample = function(){}
+console.log(sample.__proto__ == Object.Prototype);
