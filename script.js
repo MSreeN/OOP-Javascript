@@ -102,3 +102,6 @@ console.log(sampleFun.__proto__ == Function.prototype);
 //using normal function syntax, sample is an reference to function, so it is not an object that's why below log returns false because sample doesn't have __proto__ on it.
 const sample = function(){}
 console.log(sample.__proto__ == Object.Prototype);
+
+const sampleArrow = () => {}
+console.log(sampleArrow.__proto__ == Object.prototype);
