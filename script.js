@@ -103,5 +103,6 @@ console.log(sampleFun.__proto__ == Function.prototype);
 const sample = function(){}
 console.log(sample.__proto__ == Object.Prototype);
 
+//Below log returns false because it is same like the normal function so it doesn't have the __proto__ property on it.
 const sampleArrow = () => {}
 console.log(sampleArrow.__proto__ == Object.prototype);
