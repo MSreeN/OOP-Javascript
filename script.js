@@ -113,3 +113,19 @@ console.log(naga.__proto__.__proto__);
 
 //below line points to the __proto__ of the object which is obviously null
 console.log(naga.__proto__.__proto__.__proto__);
+
+console.dir(Person.prototype);
+
+//////////////////Prototypes of arrays
+
+const arr = [1,23,5,6]
+// below log prints all of the methods on arrays, this arr will not carry those methods, they are from prototypal inheritance
+console.log(arr.__proto__);
+
+//defining method on Array prototype
+Array.prototype.sample = function(){}
+
+console.log(arr.__proto__);
+console.log(arr);
+const arr1 = new Array(1,2,3,4)
+console.log(arr1);
