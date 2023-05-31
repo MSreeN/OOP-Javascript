@@ -123,9 +123,13 @@ const arr = [1,23,5,6]
 console.log(arr.__proto__);
 
 //defining method on Array prototype
+//this is how methods are defined and when we search for any methods online, we always see Array.prototype.method_nae
 Array.prototype.sample = function(){}
 
 console.log(arr.__proto__);
 console.log(arr);
 const arr1 = new Array(1,2,3,4)
 console.log(arr1);
+
+console.log(Array.prototype);
+console.log(arr1.__proto__);
