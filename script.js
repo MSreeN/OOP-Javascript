@@ -106,3 +106,10 @@ console.log(sample.__proto__ == Object.Prototype);
 //Below log returns false because it is same like the normal function so it doesn't have the __proto__ property on it.
 const sampleArrow = () => {}
 console.log(sampleArrow.__proto__ == Object.prototype);
+
+//below line points to the prototype of the object
+console.log(naga.__proto__.__proto__);
+
+
+//below line points to the __proto__ of the object which is obviously null
+console.log(naga.__proto__.__proto__.__proto__);
