@@ -133,3 +133,17 @@ console.log(arr1);
 
 console.log(Array.prototype);
 console.log(arr1.__proto__);
+console.log(typeof arr1);
+console.dir(sample.__proto__)
+
+////////////////////////////////////////////////////coding challenge 1
+
+const Car = function(make, speed){
+  this.make = make;
+  this.speed = speed;
+}
+
+Car.prototype.accelerate = function(){
+  this.speed+=10;
+  console.log(`current speed is ${this.speed}`);
+}
