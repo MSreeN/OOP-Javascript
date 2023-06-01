@@ -156,3 +156,12 @@ Car.prototype.break = function(){
 const skoda = new Car("vw", 50)
 skoda.accelerate()
 skoda.break()
+///////////////////ES6 Classes/////////////////////
+class Per{
+  constructor(firstName, birthDate){
+    console.log("from the constructor function");
+  }
+}
+
+const sree1 = new Per();
+
