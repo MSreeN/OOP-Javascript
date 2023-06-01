@@ -159,9 +159,13 @@ skoda.break()
 ///////////////////ES6 Classes/////////////////////
 class Per{
   constructor(firstName, birthDate){
-    console.log("from the constructor function");
+    this.firstName = firstName;
+    this.dob = birthDate;
+  }
+  calcAge(){
+    console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
 }
 
-const sree1 = new Per();
-
+const sree1 = new Per("sree", new Date("25 oct 2001"));
+sree1.calcAge()
