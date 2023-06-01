@@ -147,3 +147,8 @@ Car.prototype.accelerate = function(){
   this.speed+=10;
   console.log(`current speed is ${this.speed}`);
 }
+
+Car.prototype.break = function(){
+  this.speed-=5;
+  console.log(`current speed is ${this.speed}`);
+}
