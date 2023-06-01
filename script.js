@@ -152,3 +152,7 @@ Car.prototype.break = function(){
   this.speed-=5;
   console.log(`current speed is ${this.speed}`);
 }
+
+const skoda = new Car("vw", 50)
+skoda.accelerate()
+skoda.break()
