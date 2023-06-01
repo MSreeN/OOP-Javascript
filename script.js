@@ -169,3 +169,9 @@ class Per{
 
 const sree1 = new Per("sree", new Date("25 oct 2001"));
 sree1.calcAge()
+Per.prototype.height = function(){
+  console.log(`${this.firstName} is ${this.dob.getDate()*10}cm height`);
+}
+
+sree1.height()
+console.log(Per.prototype);
