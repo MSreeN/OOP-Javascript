@@ -182,7 +182,13 @@ const account= {
   movements: [10,20,30,40],
   get latest(){
     return this.movements.slice(-1).pop()
+  },
+  set latest(num){
+    this.movements.push(num)
+    return this.movements
   }
 }
 
 console.log(account.latest);
+console.log(`${account.latest= 500}`);
+console.log(account.movements);
