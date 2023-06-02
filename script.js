@@ -175,3 +175,14 @@ Per.prototype.height = function(){
 
 sree1.height()
 console.log(Per.prototype);
+///////////////////getters and setters///////////////
+
+const account= {
+  owner: "sree",
+  movements: [10,20,30,40],
+  get latest(){
+    return this.movements.slice(-1).pop()
+  }
+}
+
+console.log(account.latest);
