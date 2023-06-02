@@ -162,6 +162,9 @@ class Per{
     this.firstName = firstName;
     this.dob = birthDate;
   }
+  get age(){
+    return new Date().getFullYear() - this.dob.getFullYear();
+  }
   calcAge(){
     console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
@@ -170,7 +173,7 @@ class Per{
 const sree1 = new Per("sree", new Date("25 oct 2001"));
 sree1.calcAge()
 Per.prototype.height = function(){
-  console.log(`${this.firstName} is ${this.dob.getDate()*10}cm height`);
+  console.log(`${this.firstName} is ${sree1.age}cm height`);
 }
 
 sree1.height()
