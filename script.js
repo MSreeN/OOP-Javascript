@@ -159,25 +159,25 @@ skoda.break()
 ///////////////////ES6 Classes/////////////////////
 class Per{
   constructor(firstName, birthDate){
-    this.firstName = firstName;
+    this.fullName = firstName;
     this.dob = birthDate;
   }
   get age(){
     return new Date().getFullYear() - this.dob.getFullYear();
+  }
+  
+  set fullName(name){
+    console.log(name);
+    console.log(name);
+    if(name.includes(" ")) this.fullName = name
+    else console.log(`given name is not full name`);
   }
   calcAge(){
     console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
 }
 
-const sree1 = new Per("sree", new Date("25 oct 2001"));
-sree1.calcAge()
-Per.prototype.height = function(){
-  console.log(`${this.firstName} is ${sree1.age}cm height`);
-}
 
-sree1.height()
-console.log(Per.prototype);
 ///////////////////getters and setters///////////////
 
 const account= {
@@ -195,3 +195,14 @@ const account= {
 console.log(account.latest);
 console.log(`${account.latest= 500}`);
 console.log(account.movements);
+console.log();
+
+const sree1 = new Per("sree", new Date("25 oct 2001"));
+sree1.calcAge()
+Per.prototype.height = function(){
+  console.log(`${this.firstName} is ${sree1.age}cm height`);
+}
+sree1.height()
+console.log(Per.prototype);
+
+console.log(sree1.fullName("sree mahesh"));
