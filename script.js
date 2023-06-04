@@ -174,6 +174,11 @@ class Per{
   calcAge(){
     console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
+
+  /////static method
+  static staticInClass(){
+    console.log("hey this is static method form/inside class");
+  }
 }
 
 
@@ -201,3 +206,15 @@ Per.prototype.height = function(){
 sree1.height()
 console.log(Per.prototype);
 console.log(sree1);
+//////////////////static methods/////////////////
+//example of static method is Array.form 
+//Array.form is an static methods and it can't be called on the array like usual methods
+//Array.from method is defined on the array constructor function not on the prototype.
+console.log(Array.from(document.querySelectorAll('h1')));
+console.log(Number.parseFloat("3.2er"))
+
+///defining static method on the Per
+//Objects created using Per cannot access this method
+Per.staticMethod = function(){
+  console.log("hey this is static method");
+}
