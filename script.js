@@ -171,6 +171,7 @@ class Per{
     if(name.includes(" ")) this._fullName = name
     else alert("not a full name")
   }
+  ///these non static methods are called instance methods
   calcAge(){
     console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
@@ -218,3 +219,14 @@ console.log(Number.parseFloat("3.2er"))
 Per.staticMethod = function(){
   console.log("hey this is static method");
 }
+
+/////////////Object.create////////////////
+
+const PersonProto = {
+  calcAge(){
+
+  }
+}
+
+const sreeCreate = Object.create(PersonProto)
+console.log(sreeCreate);
