@@ -228,5 +228,7 @@ const PersonProto = {
   }
 }
 
+//here we are linking the prototype of sreeCreate to the prototype of the PersonProto object.
+//In constructor function and classes this linking was automatically performed.
 const sreeCreate = Object.create(PersonProto)
 console.log(sreeCreate);
