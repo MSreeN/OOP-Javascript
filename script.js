@@ -225,10 +225,21 @@ Per.staticMethod = function(){
 const PersonProto = {
   calcAge(){
 
+  },
+
+  setName(name){
+    this.fullName = name;
+  },
+
+  setDob(date){
+    this.dob = date;
   }
 }
 
 //here we are linking the prototype of sreeCreate to the prototype of the PersonProto object.
 //In constructor function and classes this linking was automatically performed.
 const sreeCreate = Object.create(PersonProto)
+//setting properties 
+sreeCreate.setName("sree")
+sreeCreate.setDob(new Date("25 oct 2001"));
 console.log(sreeCreate);
