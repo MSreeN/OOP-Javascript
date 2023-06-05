@@ -262,7 +262,7 @@ class CarCl{
   }
 
   get speedUs(){
-    console.log(`current speed of car in miles/hour is ${this.speed/1.6}`);
+    console.log(`current speed of car(${this.speed}) in miles/hour is ${this.speed/1.6}`);
   }
 
   set speedUs(speed){
@@ -275,3 +275,5 @@ const ford = new CarCl("ford", 120)
 console.log(ford);
 ford.accelerate();
 ford.brake();
+ford.speedUs;
+ford.speedUs = 78.125;
