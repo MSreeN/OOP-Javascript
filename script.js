@@ -243,3 +243,30 @@ const sreeCreate = Object.create(PersonProto)
 sreeCreate.setName("sree")
 sreeCreate.setDob(new Date("25 oct 2001"));
 console.log(sreeCreate);
+
+
+/////////////////challenge 2 //////////////////
+class CarCl{
+  constructor(make, speed){
+    this.make = make;
+    this.speed = speed;
+  }
+  accelerate(){
+    this.speed = this.speed + 10;
+    console.log(`current speed is ${this.speed}`);
+  }
+
+  brake(){
+    this.speed -= this.speed;
+    console.log(`current speed is ${this.speed}`);
+  }
+
+  get speedUs(){
+    console.log(`current speed of car in miles/hour is ${this.speed/1.6}`);
+  }
+
+  set speedUs(speed){
+    this.speed = speed * 1.6;
+    console.log(`${speed} in miles/hour is ${this.speed}`);
+  }
+}
