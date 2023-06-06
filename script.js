@@ -285,6 +285,8 @@ const Student = function(firstName, dob, course){
 //since we are using inheritance below two properties are already present on the Person object so if we re declare them here it leads to code duplication hence we shouldn't use these here
   // this.firstName = firstName;
   // this.dob = dob;
+//Call method will set the this keyword to Person  and extra parameters can be provided next to this keyword
+//we want this keyword inside Person function to simply be the this inside Student
   Person.call(this,firstName, dob)
   this.course = course
 }
