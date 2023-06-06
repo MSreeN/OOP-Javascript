@@ -277,3 +277,16 @@ ford.accelerate();
 ford.brake();
 ford.speedUs;
 ford.speedUs = 78.125;
+
+
+//////////////////Inheritance//////////////////////
+
+const Student = function(firstName, dob, course){
+  this.firstName = firstName;
+  this.dob = dob;
+  this.course = course
+}
+
+Student.prototype.introduce = function(){
+  console.log(`my name is ${this.firstName}`);
+}
