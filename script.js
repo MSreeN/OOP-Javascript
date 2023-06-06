@@ -282,11 +282,17 @@ ford.speedUs = 78.125;
 //////////////////Inheritance//////////////////////
 
 const Student = function(firstName, dob, course){
-  this.firstName = firstName;
-  this.dob = dob;
+//since we are using inheritance below two properties are already present on the Person object so if we re declare them here it leads to code duplication hence we shouldn't use these here
+  // this.firstName = firstName;
+  // this.dob = dob;
+  Person.call(this,firstName, dob)
   this.course = course
 }
 
 Student.prototype.introduce = function(){
   console.log(`my name is ${this.firstName}`);
 }
+
+const sreeStudent = new Student("sree student", new Date("25 oct 2001"), "cse")
+console.log(sreeStudent);
+sreeStudent.introduce();
