@@ -287,6 +287,7 @@ const Student = function(firstName, dob, course){
   // this.dob = dob;
 //Call method will set the this keyword to Person  and extra parameters can be provided next to this keyword
 //we want this keyword inside Person function to simply be the this inside Student
+//But the thing is if person has any methods which we want to access here will not be accessible because now the this is pointing to Student and those methods are implemented on the Person
   Person.call(this,firstName, dob)
   this.course = course
 }
