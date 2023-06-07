@@ -76,10 +76,7 @@ console.log(Object.prototype.isPrototypeOf(Person.prototype));
 console.log(Object.prototype.isPrototypeOf(Person.prototype));
 console.log(Person.prototype.isPrototypeOf(Person));
 
-Person.prototype.species = "humans"
-console.log(naga,sree);
-console.log(naga.hasOwnProperty("firstName"));
-console.log(naga.hasOwnProperty("species"));
+
 
 //Always remember 
 //Array -> Function -> Object
@@ -290,6 +287,11 @@ const Student = function(firstName, dob, course){
 //But the thing is if person has any methods which we want to access here will not be accessible because now the this is pointing to Student and those methods are implemented on the Person
   Person.call(this,firstName, dob)
   this.course = course
+
+  //now student.prototype inherits from the person.prototype
+  //Now Student.prototype.__proto__ == Person.prototype //true
+  Student.prototype = Object.create(Person.prototype)
+
 }
 
 Student.prototype.introduce = function(){
