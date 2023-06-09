@@ -288,15 +288,15 @@ const Student = function(firstName, dob, course){
   Person.call(this,firstName, dob)
   this.course = course
 
-  //now student.prototype inherits from the person.prototype
-  //Now Student.prototype.__proto__ == Person.prototype //true
-  //wkt object.create method sets __proto__ object of whatever is on the left hand (Student.prototype) to what ever it is provided to Object.create  (Person.prototype)
-  Student.prototype = Object.create(Person.prototype)
-  //we cant do Student.prototype = Person.prototype because, it will totally change the student.prototype what we instead want here is to set or link student.prototype.__proto__ (as a child) to the Student.prototype(as a parent)
-  //testing
-  //testing commits
-  //testing commits line2
 }
+//now student.prototype inherits from the person.prototype
+//Now Student.prototype.__proto__ == Person.prototype //true
+//wkt object.create method sets __proto__ object of whatever is on the left hand (Student.prototype) to what ever it is provided to Object.create  (Person.prototype)
+Student.prototype = Object.create(Person.prototype)
+//we cant do Student.prototype = Person.prototype because, it will totally change the student.prototype what we instead want here is to set or link student.prototype.__proto__ (as a child) to the Student.prototype(as a parent)
+//testing
+//testing commits
+//testing commits line2
 
 Student.prototype.introduce = function(){
   console.log(`my name is ${this.firstName}`);
@@ -305,3 +305,4 @@ Student.prototype.introduce = function(){
 const sreeStudent = new Student("sree student", new Date("25 oct 2001"), "cse")
 console.log(sreeStudent);
 sreeStudent.introduce();
+console.log(sreeStudent.calcAge());
