@@ -290,6 +290,7 @@ const Student = function(firstName, dob, course){
 
   //now student.prototype inherits from the person.prototype
   //Now Student.prototype.__proto__ == Person.prototype //true
+  //wkt object.create method sets __proto__ object of whatever is on the left hand (Student.prototype) to what ever it is provided to Object.create  (Person.prototype)
   Student.prototype = Object.create(Person.prototype)
   //testing
   //testing commits
