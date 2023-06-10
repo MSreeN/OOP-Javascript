@@ -301,7 +301,8 @@ Student.prototype = Object.create(Person.prototype)
 Student.prototype.introduce = function(){
   console.log(`my name is ${this.firstName}`);
 }
-
+//With this line added now student.constructor points to the constructor of the Student, previously it was pointing to the constructor of the person.
+Student.prototype.constructor = Student;
 const sreeStudent = new Student("sree student", new Date("25 oct 2001"), "cse")
 console.log(sreeStudent);
 sreeStudent.introduce();
