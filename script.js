@@ -307,3 +307,42 @@ const sreeStudent = new Student("sree student", new Date("25 oct 2001"), "cse")
 console.log(sreeStudent);
 sreeStudent.introduce();
 console.log(sreeStudent.calcAge());
+
+/////////////////challenge 3///////////////////////////
+
+// class CarCl{
+//   constructor(make, speed){
+//     this.make = make;
+//     this.speed = speed;
+//   }
+//   accelerate(){
+//     this.speed = this.speed + 10;
+//     console.log(`current speed is ${this.speed}`);
+//   }
+
+//   brake(){
+//     this.speed -= 5;
+//     console.log(`current speed is ${this.speed}`);
+//   }
+
+//   get speedUs(){
+//     console.log(`current speed of car(${this.speed}) in miles/hour is ${this.speed/1.6}`);
+//   }
+
+//   set speedUs(speed){
+//     this.speed = speed * 1.6;
+//     console.log(`${speed} in kilometers/hour is ${this.speed}`);
+//   }
+// }
+
+
+class EV{
+  constructor(make, speed, charge){
+    new Car(make, speed);
+    this.charge = charge;
+
+  }
+  changeBattery(chargeTo){
+    this.charge = chargeTo; 
+  }
+}
