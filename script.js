@@ -343,7 +343,7 @@ const Ev = function(make, speed, charge){
 }
 
 Ev.prototype = Object.create(Car.prototype);
-Ev.prototype = Ev;
+Ev.prototype.constructor = Ev;
 
 Ev.prototype.accelerate = function(){
   this.speed+= 20;
@@ -359,4 +359,5 @@ const tesla = new Ev("Tesla", 0, 50)
 tesla.accelerate()
 tesla.chargeBattery(100)
 console.log(tesla);
-
+tesla.break()
+tesla.break()
