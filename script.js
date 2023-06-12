@@ -345,4 +345,10 @@ class EV{
   changeBattery(chargeTo){
     this.charge = chargeTo; 
   }
+
+  accelerate(){
+    this.speed = speed;
+    this.charge -= 1;
+    console.log(`${this.make} going at ${this.speed}Km/h, with a charge of ${this.charge}`);
+  }
 }
