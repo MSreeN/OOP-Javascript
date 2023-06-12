@@ -337,3 +337,21 @@ console.log(sreeStudent.calcAge());
 
 
 
+const Ev = function(make, speed, charge){
+  Car.call(this, make, speed)
+  this.charge = charge
+}
+
+Ev.prototype = Object.create(Car.prototype);
+Ev.prototype = Ev;
+
+Ev.prototype.accelerate = function(){
+  this.speed+= 20;
+  this.charge -= 1;
+  console.log(`${this.make} going at ${this.speed}, with a charge of ${this.charge}%`);
+}
+
+const tesla = new Ev("Tesla", 0, 50)
+console.log(tesla);
+tesla.accelerate()
+tesla.brake()
