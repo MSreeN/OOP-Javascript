@@ -336,19 +336,4 @@ console.log(sreeStudent.calcAge());
 // }
 
 
-class EV{
-  constructor(make, speed, charge){
-    new Car(make, speed);
-    this.charge = charge;
 
-  }
-  changeBattery(chargeTo){
-    this.charge = chargeTo; 
-  }
-
-  accelerate(){
-    this.speed = speed;
-    this.charge -= 1;
-    console.log(`${this.make} going at ${this.speed}Km/h, with a charge of ${this.charge}`);
-  }
-}
