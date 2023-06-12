@@ -351,7 +351,12 @@ Ev.prototype.accelerate = function(){
   console.log(`${this.make} going at ${this.speed}, with a charge of ${this.charge}%`);
 }
 
+Ev.prototype.chargeBattery = function(chargeTo){
+  this.charge  = chargeTo;
+}
+
 const tesla = new Ev("Tesla", 0, 50)
-console.log(tesla);
 tesla.accelerate()
-tesla.brake()
+tesla.chargeBattery(100)
+console.log(tesla);
+
