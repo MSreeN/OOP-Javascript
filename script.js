@@ -341,7 +341,7 @@ const Ev = function(make, speed, charge){
   Car.call(this, make, speed)
   this.charge = charge
 }
-
+//we are linking the Ev to the Car making Ev class as a child class and Car as parent
 Ev.prototype = Object.create(Car.prototype);
 Ev.prototype.constructor = Ev;
 
@@ -357,7 +357,7 @@ Ev.prototype.chargeBattery = function(chargeTo){
 
 const tesla = new Ev("Tesla", 0, 50)
 tesla.accelerate()
-tesla.chargeBattery(100)
+tesla.chargeBattery(100);
 console.log(tesla);
 tesla.break()
 tesla.break()
