@@ -343,6 +343,8 @@ const Ev = function(make, speed, charge){
 }
 //we are linking the Ev to the Car making Ev class as a child class and Car as parent
 Ev.prototype = Object.create(Car.prototype);
+
+//Ev constructor points to the constructor of Car so we re-assign it to the constructor of Ev
 Ev.prototype.constructor = Ev;
 
 Ev.prototype.accelerate = function(){
