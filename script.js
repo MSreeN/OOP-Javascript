@@ -363,3 +363,6 @@ tesla.chargeBattery(100);
 console.log(tesla);
 tesla.break()
 tesla.break()
+tesla.accelerate()
+tesla.break()
+tesla.accelerate()
