@@ -364,5 +364,7 @@ console.log(tesla);
 tesla.break()
 tesla.break()
 tesla.accelerate()
+//these methods are accessible through prototype inheritance from Car
 tesla.break()
 tesla.accelerate()
+console.log(tesla);
