@@ -401,7 +401,11 @@ console.log(tesla);
 class StudentCl extends Per{
   constructor(firstName, dob, branchName){
     //super keyword needs to be set first
+    //super keyword set the this keyword then we can access or set other properties to this keyword.
     super(firstName, dob);
-
+    this.brachName = branchName;
   }
 }
+
+const sreeStudentCl = new StudentCl("sree mahesh", new Date("oct 25 2001"),"computers")
+console.log(sreeStudentCl);
