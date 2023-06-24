@@ -170,7 +170,7 @@ class Per{
   }
   ///these non static methods are called instance methods
   calcAge(){
-    console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
+    console.log(`${this._fullName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
   }
 
   /////static method
@@ -409,3 +409,4 @@ class StudentCl extends Per{
 
 const sreeStudentCl = new StudentCl("sree mahesh", new Date("oct 25 2001"),"computers")
 console.log(sreeStudentCl);
+sreeStudentCl.calcAge();
