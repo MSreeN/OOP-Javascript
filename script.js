@@ -368,3 +368,40 @@ tesla.accelerate()
 tesla.break()
 tesla.accelerate()
 console.log(tesla);
+
+
+////////////////////////////Inheritances between Es6 classes///////////////////////////////////
+
+// class Per{
+//   constructor(firstName, birthDate){
+//     this.fullName = firstName;
+//     this.dob = birthDate;
+//   }
+//   get age(){
+//     return new Date().getFullYear() - this.dob.getFullYear();
+//   }
+  
+//   set fullName(name){
+//     console.log(name);
+//     if(name.includes(" ")) this._fullName = name
+//     else alert("not a full name")
+//   }
+//   ///these non static methods are called instance methods
+//   calcAge(){
+//     console.log(`${this.firstName} is ${new Date().getFullYear()- this.dob.getFullYear()} years old.`);
+//   }
+
+//   /////static method
+//   static staticInClass(){
+//     console.log("hey this is static method form/inside class");
+//   }
+// }
+///inheriting form the above class
+
+class StudentCl extends Per{
+  constructor(firstName, dob, branchName){
+    //super keyword needs to be set first
+    super(firstName, dob);
+
+  }
+}
