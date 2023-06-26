@@ -407,6 +407,8 @@ class StudentCl extends Per{
   }
 }
 
+
+//student calcAge is defined on the Per parent class and sreeStudentCl is inheriting that method through prototypal inheritance 
 const sreeStudentCl = new StudentCl("sree mahesh", new Date("oct 25 2001"),"computers")
 console.log(sreeStudentCl);
 sreeStudentCl.calcAge();
