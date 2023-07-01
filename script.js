@@ -224,6 +224,11 @@ const PersonProto = {
 
   },
 
+  init(firstName, birthYear){
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+
   setName(name){
     this.fullName = name;
   },
@@ -247,10 +252,14 @@ console.log(sreeCreate);
 
 //proto of studentProto is PersonProto
 const StudentProto = Object.create(PersonProto);
+StudentProto.init = function(firstName, birthYear, courseName){
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = courseName;
+}
 console.log(StudentProto);
 //proto of mah is StudentProto
 const mah = Object.create(StudentProto);
-mah.setName("mahesh");
+mah.init("sree", new Date("25 oct 2001"), "computers")
 console.log(mah);
 
 /////////////////challenge 2 //////////////////
