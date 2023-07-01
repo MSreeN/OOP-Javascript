@@ -235,12 +235,23 @@ const PersonProto = {
 
 //here we are linking the prototype of sreeCreate to the prototype of the PersonProto object.
 //In constructor function and classes this linking was automatically performed.
+
 const sreeCreate = Object.create(PersonProto)
 //setting properties 
 sreeCreate.setName("sree")
 sreeCreate.setDob(new Date("25 oct 2001"));
 console.log(sreeCreate);
 
+
+/////////Inheritance between Object.create///////////////
+
+//proto of studentProto is PersonProto
+const StudentProto = Object.create(PersonProto);
+console.log(StudentProto);
+//proto of mah is StudentProto
+const mah = Object.create(StudentProto);
+mah.setName("mahesh");
+console.log(mah);
 
 /////////////////challenge 2 //////////////////
 class CarCl{
@@ -412,3 +423,22 @@ class StudentCl extends Per{
 const sreeStudentCl = new StudentCl("sree mahesh", new Date("oct 25 2001"),"computers")
 console.log(sreeStudentCl);
 sreeStudentCl.calcAge();
+
+// const s = "ElEphANT".split();
+// const res = [];
+// s.forEach(ele => {
+//   if(ele == ele.toUpperCase()){
+//     res.push(ele.toLowerCase());
+//     console.log("");
+//   }
+//   else if(ele == ele.toLowerCase()){
+//     res.push(ele.toUpperCase());
+//     console.log("--------");
+//   }
+// })
+
+// console.log(res);
+
+
+
+
