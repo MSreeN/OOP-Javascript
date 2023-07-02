@@ -459,11 +459,11 @@ sreeStudentCl.calcAge();
 
 class Account{
 
-  //public field
+  //public field(instances)
   // _movements = [];
   locale = navigator.language
 
-  // private fields
+  // private fields(instances)
   #movements = [];
   #pin;
   constructor(name, currency, pin){
@@ -479,18 +479,33 @@ class Account{
     return this.#movements;
   }
 
-  _approveLoan(){
-    return true;
-  }
+  // _approveLoan(){
+    //   return true;
+    // }
+    
+    //public method
+    deposit(val){
+      this.#movements.push(val);
+    }
+    
+    withdraw(val){
+      this.deposit(val);
+    }
 
-  deposit(val){
-    this.#movements.push(val);
+    requestLoan(val){
+      if(this.#approveLoan){
+        this.deposit(val);
+      }
+    }
+    
+    //private methods
+    //lets make _approveLoad method private because it should be used internally not externally
+    
+    //this private method is set on instance not on prototype
+    #approveLoan(){
+      return true;
+    }
   }
-
-  withdraw(val){
-    this.deposit(val);
-  }
-}
 
 const sreeAcc = new Account("sree", "rupee", "123");
 
@@ -498,4 +513,7 @@ const sreeAcc = new Account("sree", "rupee", "123");
 // console.log(sreeAcc.#movements);
 // console.log(sreeAcc.#pin);
 
+//if we try to access private property outside class we get an error
+//chrome sees this private approve loan method as private field not as method
+// console.log(sreeAcc.#approveLoan(1000));
 console.log(sreeAcc);
