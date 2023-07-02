@@ -452,21 +452,34 @@ sreeStudentCl.calcAge();
 
 
 //////Encapsulation: Protected properties and methods/////
+//public fields
+//public methods
+//private fields
+//private methods
+
 class Account{
+
+  //public field
+  _movements = [];
+  locale = navigator.language;
+
+  // private fields
+  
+
   constructor(name, currency, pin){
     this.name = name;
-    this.locale = navigator.language;
+    // this.locale = navigator.language;
     this.currency = currency;
-    this.pin = pin;
+    this._pin = pin;
     //protected property and developers don't use property with _ outside class.
-    this._movements = []
+    // this._movements = []
   }
 
   getMovements(){
     return this._movements;
   }
 
-  approveLoan(){
+  _approveLoan(){
     return true;
   }
 
