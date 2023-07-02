@@ -451,3 +451,33 @@ sreeStudentCl.calcAge();
 
 
 
+//////Encapsulation: Protected properties and methods/////
+class Account{
+  constructor(name, currency, pin){
+    this.name = name;
+    this.locale = navigator.language;
+    this.currency = currency;
+    this.pin = pin;
+    //protected property and developers don't use property with _ outside class.
+    this._movements = []
+  }
+
+  getMovements(){
+    return this._movements;
+  }
+
+  approveLoan(){
+    return true;
+  }
+
+  deposit(val){
+    this._movements.push(val);
+  }
+
+  withdraw(val){
+    this.deposit(val);
+  }
+}
+
+const sreeAcc = new Account("sree", "rupee", "123");
+console.log(sreeAcc);
