@@ -461,16 +461,16 @@ class Account{
 
   //public field
   // _movements = [];
-  locale = navigator.language;
+  locale = navigator.language
 
   // private fields
   #movements = [];
-
+  #pin;
   constructor(name, currency, pin){
     this.name = name;
     // this.locale = navigator.language;
     this.currency = currency;
-    this._pin = pin;
+    this.#pin = pin;
     //protected property and developers don't use property with _ outside class.
     // this._movements = []
   }
@@ -496,5 +496,6 @@ const sreeAcc = new Account("sree", "rupee", "123");
 
 //if we try to access private property outside class we get an error
 // console.log(sreeAcc.#movements);
+// console.log(sreeAcc.#pin);
 
 console.log(sreeAcc);
