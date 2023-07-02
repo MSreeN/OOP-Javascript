@@ -460,11 +460,11 @@ sreeStudentCl.calcAge();
 class Account{
 
   //public field
-  _movements = [];
+  // _movements = [];
   locale = navigator.language;
 
   // private fields
-  
+  #movements = [];
 
   constructor(name, currency, pin){
     this.name = name;
@@ -476,7 +476,7 @@ class Account{
   }
 
   getMovements(){
-    return this._movements;
+    return this.#movements;
   }
 
   _approveLoan(){
@@ -484,7 +484,7 @@ class Account{
   }
 
   deposit(val){
-    this._movements.push(val);
+    this.#movements.push(val);
   }
 
   withdraw(val){
@@ -493,4 +493,8 @@ class Account{
 }
 
 const sreeAcc = new Account("sree", "rupee", "123");
+
+//if we try to access private property outside class we get an error
+// console.log(sreeAcc.#movements);
+
 console.log(sreeAcc);
