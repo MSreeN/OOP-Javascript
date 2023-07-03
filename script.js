@@ -505,6 +505,12 @@ class Account{
     #approveLoan(){
       return true;
     }
+
+
+    //static methods available on prototype not instance, can only call this method using class name.
+    static helper(){
+      console.log("this is static helper method");
+    }
   }
 
 const sreeAcc = new Account("sree", "rupee", "123");
