@@ -276,6 +276,7 @@ class CarCl{
   brake(){
     this.speed -= 5;
     console.log(`current speed is ${this.speed}`);
+    return this;
   }
 
   get speedUs(){
@@ -582,12 +583,21 @@ class EVCL extends CarCl{
   }
   chargeBattery(chargeTo){
     this.#charge = chargeTo;
+    // console.log(this);
+    return this;
   }
 
   accelerate(){
     this.speed += 20;
-    this.#charge--;
-    console.log(`${this.make} going at ${this.speed}, with a charge of ${this.charge}%`);
+    this.#charge -= 1;
+    console.log(`${this.make} going at ${this.speed}, with a charge of ${this.#charge}%`);
+    return this;
   }
 
 }
+
+const classTesla = new EVCL("tesla",0,20);
+console.log(classTesla);
+classTesla.accelerate().brake().chargeBattery(80)
+
+console.log(classTesla);
