@@ -486,16 +486,18 @@ class Account{
     //public method
     deposit(val){
       this.#movements.push(val);
+      return this;
     }
     
     withdraw(val){
-      this.deposit(val);
+      return this.deposit(val);
     }
 
     requestLoan(val){
       if(this.#approveLoan){
         this.deposit(val);
       }
+      return this;
     }
     
     //private methods
@@ -523,3 +525,11 @@ const sreeAcc = new Account("sree", "rupee", "123");
 //chrome sees this private approve loan method as private field not as method
 // console.log(sreeAcc.#approveLoan(1000));
 console.log(sreeAcc);
+
+
+////////////////chaining of methods////////////
+//chaining methods can only be possible if every method in that chain returns something(object) then only next method can work on that returned object;
+
+sreeAcc.deposit(500).withdraw(400).requestLoan(100).withdraw(200);
+
+console.log("after chaining methods", sreeAcc);
